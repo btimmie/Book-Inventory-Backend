@@ -14,6 +14,7 @@ public class UserFactory {
                 .Builder(values.get("code"))
                 .firstName(values.get("firstName"))
                 .lastName(values.get("lastName"))
+                //.password(values.get("password"))
                 //.consumtionList(consumtionList)
                 .build();
         return user;

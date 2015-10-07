@@ -32,6 +32,6 @@ public class InventoryItemServiceImpl implements InventoryItemService {
 
     @Override
     public List<Consumtion> getAllConsumtions(Long id) {
-        return repository.findOne(id).getConsumtionList();
+        return null;//repository.findOne(id).getConsumtionList();
     }
 }

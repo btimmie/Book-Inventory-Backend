@@ -26,7 +26,7 @@ public class OrderTest {
         values.put("description","Urgent order for a vey special client");
 
         Order order = OrderFactory
-                .createOrder(20,values,inventoryItemList);
+                .createOrder(20,values);
 
         Assert.assertEquals("Urgent order for a vey special client",order.getDescription());
     }
@@ -59,7 +59,7 @@ public class OrderTest {
         values.put("description","Urgent order for a vey special client");
 
         Order order = OrderFactory
-                .createOrder(20,values,inventoryItemList);
+                .createOrder(20,values);
 
         Order newOrder = new Order
                 .Builder(order.getCode())

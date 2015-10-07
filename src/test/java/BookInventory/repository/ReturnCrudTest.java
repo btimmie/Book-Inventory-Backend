@@ -27,6 +27,7 @@ public class ReturnCrudTest extends AbstractTestNGSpringContextTests {
 
     @Autowired
     private ReturnRepository repository;
+
     @Test
     public void aCreate() throws Exception{
         List<User> userList = new ArrayList<User>();
@@ -35,7 +36,7 @@ public class ReturnCrudTest extends AbstractTestNGSpringContextTests {
         values.put("code","54ZTY");
 
         Return rt = ReturnFactory
-                .createReturn(5,values, userList);
+                .createReturn(5,values);
         repository.save(rt);
         id=rt.getId();
         Assert.assertNotNull(rt);

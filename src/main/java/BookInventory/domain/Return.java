@@ -3,7 +3,6 @@ package BookInventory.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by student on 2015/04/25.
@@ -17,9 +16,9 @@ public class Return implements Serializable {
     private String code;
     private Date dateReturned;
     private int quantity;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "return_id")
-    private List<User> userList;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "return_id")
+//    private List<User> userList;
 
     private Return(){
 
@@ -30,7 +29,7 @@ public class Return implements Serializable {
         this.code=builder.code;
         this.quantity=builder.quantity;
         this.dateReturned=builder.dateReturned;
-        this.userList =builder.userList;
+//        this.userList =builder.userList;
     }
 
     public Long getId() {
@@ -49,16 +48,16 @@ public class Return implements Serializable {
         return quantity;
     }
 
-    public List<User> getUserList() {
-        return userList;
-    }
+//    public List<User> getUserList() {
+//        return userList;
+//    }
 
     public static class Builder {
         private Long id;
         private String code;
         private Date dateReturned;
         private int quantity;
-        private List<User> userList;
+        //private List<User> userList;
 
         public Builder(String code) {
             this.code = code;
@@ -79,17 +78,17 @@ public class Return implements Serializable {
             return this;
         }
 
-        public Builder customerList(List<User> value) {
-            this.userList = value;
-            return this;
-        }
+//        public Builder customerList(List<User> value) {
+//            this.userList = value;
+//            return this;
+//        }
 
         public Builder copy(Return value) {
             this.code = value.getCode();
             this.id = value.getId();
             this.quantity = value.getQuantity();
             this.dateReturned = value.getDateReturned();
-            this.userList = value.getUserList();
+//            this.userList = value.getUserList();
             return this;
         }
 

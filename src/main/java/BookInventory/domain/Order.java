@@ -3,7 +3,6 @@ package BookInventory.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by student on 2015/04/25.
@@ -21,9 +20,9 @@ public class Order implements Serializable {
     private String description;
     //@Embedded
     //private InventoryItem inventoryItem;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="order_id")
-    private List<InventoryItem> inventoryItemList;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name="order_id")
+//    private List<InventoryItem> inventoryItemList;
 
     private Order(){
     }
@@ -35,7 +34,7 @@ public class Order implements Serializable {
         this.quantity=builder.quantity;
         this.datePlaced=builder.datePlaced;
         this.description=builder.description;
-        this.inventoryItemList=builder.inventoryItemList;
+//        this.inventoryItemList=builder.inventoryItemList;
     }
 
     public Long getId() {
@@ -58,9 +57,9 @@ public class Order implements Serializable {
         return description;
     }
 
-    public List<InventoryItem> getInventoryItemList() {
-        return inventoryItemList;
-    }
+//    public List<InventoryItem> getInventoryItemList() {
+//        return inventoryItemList;
+//    }
 
     public static class Builder{
         private Long id;
@@ -68,8 +67,8 @@ public class Order implements Serializable {
         private int quantity;
         private Date datePlaced;
         private String description;
-        private InventoryItem inventoryItem;
-        private List<InventoryItem> inventoryItemList;
+//        private InventoryItem inventoryItem;
+//        private List<InventoryItem> inventoryItemList;
 
 
         public Builder(String code){
@@ -86,20 +85,20 @@ public class Order implements Serializable {
             return this;
         }
 
-        public Builder inventoryItem(InventoryItem value){
-            this.inventoryItem=value;
-            return this;
-        }
+//        public Builder inventoryItem(InventoryItem value){
+//            this.inventoryItem=value;
+//            return this;
+//        }
 
         public Builder description(String value){
             this.description=value;
             return this;
         }
 
-        public Builder inventoryItem(List<InventoryItem> value){
-            this.inventoryItemList=value;
-            return this;
-        }
+//        public Builder inventoryItem(List<InventoryItem> value){
+//            this.inventoryItemList=value;
+//            return this;
+//        }
 
         public Builder copy(Order value) {
             //this.inventoryItem=value.inventoryItem;
@@ -107,7 +106,7 @@ public class Order implements Serializable {
             this.quantity = value.getQuantity();
             this.datePlaced = value.getDatePlaced();
             this.description = value.getDescription();
-            this.inventoryItemList = value.getInventoryItemList();
+//            this.inventoryItemList = value.getInventoryItemList();
             return this;
         }
 

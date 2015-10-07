@@ -3,6 +3,7 @@ package BookInventory.Services.Impl;
 import BookInventory.Services.SupplierService;
 import BookInventory.domain.Supplier;
 import BookInventory.repository.SupplierRepository;
+import BookInventory.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,7 +42,7 @@ public class SupplierServiceImpl implements SupplierService{
     @Override
     public List<Supplier> findAll() {
         List<Supplier> allSuppliers = new ArrayList<Supplier>();
-        Iterable<Supplier> suppliers = repository.findAll();
+        Iterable<Supplier> suppliers = repository.findAll(); //repository.findAll();
         for(Supplier supplier:suppliers){
             allSuppliers.add(supplier);
         }

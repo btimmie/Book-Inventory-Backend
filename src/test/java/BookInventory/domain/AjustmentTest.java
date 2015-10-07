@@ -26,7 +26,7 @@ public class AjustmentTest {
         values.put("code","123abc");
 
         Ajustment ajustment = AjustmentFactory
-                .createAjustment(15,values,employeeList);
+                .createAjustment(15,values);
 
         Assert.assertEquals("123abc",ajustment.getCode());
     }
@@ -40,7 +40,7 @@ public class AjustmentTest {
         values.put("code","123abc");
 
         Ajustment ajustment = AjustmentFactory
-                .createAjustment(15, values, employeeList);
+                .createAjustment(15, values);
 
         Ajustment newAjustment = new Ajustment
                 .Builder(ajustment.getItemName())

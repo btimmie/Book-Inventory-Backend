@@ -50,7 +50,7 @@ public class SupplierOrderServiceTest extends AbstractTestNGSpringContextTests {
 
 
         Order order = OrderFactory
-                .createOrder(5,values,null);
+                .createOrder(5,values);
 
         orders.add(order);
 

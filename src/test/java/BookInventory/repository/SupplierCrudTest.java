@@ -31,9 +31,9 @@ public class SupplierCrudTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void create() throws Exception{
-        List<InventoryItem> inventoryItemList = new ArrayList<InventoryItem>();
-        Map<String,String> values = new HashMap<String, String>();
-        values.put("code", "CNA007");
+        List<InventoryItem> inventoryItemList = new ArrayList<>();
+        Map<String,String> values = new HashMap<>();
+        values.put("code", "22121");
         values.put("name","CNA");
         Supplier supplier = SupplierFactory
                 .createSuplier(values, inventoryItemList);

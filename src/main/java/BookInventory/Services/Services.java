@@ -1,4 +1,4 @@
-package BookInventory.Services.Impl;
+package BookInventory.Services;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import java.util.List;
  * Created by student on 2015/09/13.
  */
 public interface Services<S, ID> {
+
     public S findById(ID id);
 
     public S save(S entity);

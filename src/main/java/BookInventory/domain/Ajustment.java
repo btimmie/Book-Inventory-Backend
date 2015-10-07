@@ -16,9 +16,9 @@ public class Ajustment implements Serializable {
     private String code;
     private String itemName;
     private int amount;
-    @OneToMany
-    @JoinColumn(name = "ajustment_id")
-    private List<Employee> employeeList;
+//    @OneToMany
+//    @JoinColumn(name = "ajustment_id")
+//    private List<Employee> employeeList;
 
 
     private Ajustment(){
@@ -29,7 +29,7 @@ public class Ajustment implements Serializable {
         this.code=builder.code;
         this.itemName=builder.itemName;
         this.amount=builder.amount;
-        this.employeeList=builder.employeeList;
+//        this.employeeList=builder.employeeList;
     }
 
     public Long getId() {
@@ -49,9 +49,9 @@ public class Ajustment implements Serializable {
         return amount;
     }
 
-    public List<Employee> getEmployeeList() {
-        return employeeList;
-    }
+//    public List<Employee> getEmployeeList() {
+//        return employeeList;
+//    }
 
     public static class Builder{
         private Long id;
@@ -88,7 +88,7 @@ public class Ajustment implements Serializable {
             this.code = value.getCode();
             this.itemName = value.getItemName();
             this.amount = value.getAmount();
-            this.employeeList=value.getEmployeeList();
+//            this.employeeList=value.getEmployeeList();
             return this;
         }
 

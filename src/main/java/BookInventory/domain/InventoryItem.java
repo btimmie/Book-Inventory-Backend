@@ -16,37 +16,37 @@ public class InventoryItem implements Serializable {
     private String code;
     private String name;
     private String description;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "inventoryItem_id")
-    private List<Consumtion> consumtionList;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "inventoryItem_id")
-    private List<Return> returnList;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "inventoryItem_id")
-    private Supplier supplier;
-    private Employee employee;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "inventoryItem_id")
+//    private List<Consumtion> consumtionList;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "inventoryItem_id")
+//    private List<Return> returnList;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "inventoryItem_id")
+//    private Supplier supplier;
+//    private Employee employee;
 
     private InventoryItem(){
     }
 
     public InventoryItem(Builder builder){
         this.id=builder.id;
-        this.supplier=builder.supplier;
+//        this.supplier=builder.supplier;
         this.code=builder.code;
         this.name=builder.name;
         this.description=builder.description;
-        this.consumtionList=builder.consumtionList;
-        this.returnList=builder.returnList;
+//        this.consumtionList=builder.consumtionList;
+//        this.returnList=builder.returnList;
     }
 
     public Long getId() {
         return id;
     }
 
-    public Supplier getSupplier() {
-        return supplier;
-    }
+//    public Supplier getSupplier() {
+//        return supplier;
+//    }
 
     public String getCode() {
         return code;
@@ -60,13 +60,13 @@ public class InventoryItem implements Serializable {
         return description;
     }
 
-    public List<Consumtion> getConsumtionList() {
-        return consumtionList;
-    }
+//    public List<Consumtion> getConsumtionList() {
+//        return consumtionList;
+//    }
 
-    public List<Return> getReturnList(){
-        return returnList;
-    }
+//    public List<Return> getReturnList(){
+//        return returnList;
+//    }
 
     public static class Builder{
         private Long id;
@@ -112,11 +112,11 @@ public class InventoryItem implements Serializable {
         }
 
         public Builder copy(InventoryItem value){
-            this.supplier = value.getSupplier();
+//            this.supplier = value.getSupplier();
             this.code = value.getCode();
             this.name = value.getName();
             this.description = value.getDescription();
-            this.consumtionList = value.getConsumtionList();
+//            this.consumtionList = value.getConsumtionList();
             return this;
         }
 

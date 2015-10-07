@@ -25,16 +25,17 @@ public class UserCrudTest extends AbstractTestNGSpringContextTests {
     private Long id;
 
     @Autowired
-    private CustomerRepository repository;
+    private UserRepository repository;
 
     @Test
     public void create() throws Exception{
         //List<Consumtion> consumtionList = new ArrayList<Consumtion>();
         Map<String,String> values = new HashMap<String,String>();
 
-        values.put("code","98TY78T");
+        values.put("code","5478");
         values.put("firstName","Junaid");
         values.put("lastName","Duplessis");
+        //values.put("password","123");
 
         User user = UserFactory
                 .createCustomer(values);
@@ -58,6 +59,8 @@ public class UserCrudTest extends AbstractTestNGSpringContextTests {
         values.put("code", "98TYT");
         values.put("firstName","Lexi");
         values.put("lastName","Parker");
+        //values.put("password","123");
+
 
         User user = UserFactory
                 .createCustomer(values);

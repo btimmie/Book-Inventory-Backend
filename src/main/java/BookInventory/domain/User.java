@@ -15,6 +15,7 @@ public class User implements Serializable {
     private String code;
     private String firstName;
     private String lastName;
+    //private String password;
 
 //    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 //    @JoinColumn(name = "consumtion_id")
@@ -29,6 +30,7 @@ public class User implements Serializable {
         this.code=builder.code;
         this.firstName=builder.firstName;
         this.lastName=builder.lastName;
+        //this.password=builder.password;
         //this.consumtionList=builder.consumtionList;
     }
 
@@ -48,7 +50,11 @@ public class User implements Serializable {
         return lastName;
     }
 
-//    public List<Consumtion> getConsumtionList() {
+//    public String getPassword() {
+//        return password;
+//    }
+
+    //    public List<Consumtion> getConsumtionList() {
 //        return consumtionList;
 //    }
 
@@ -57,6 +63,7 @@ public class User implements Serializable {
         private String code;
         private String firstName;
         private String lastName;
+        //private String password;
         //private List<Consumtion>consumtionList;
 
         public Builder(String code){
@@ -78,16 +85,22 @@ public class User implements Serializable {
             return this;
         }
 
+//        public Builder password(String value){
+//            this.password=value;
+//            return this;
+//        }
+
 //        public Builder consumtionList(List<Consumtion> value){
 //            this.consumtionList =value;
 //            return this;
 //        }
 
-        public Builder copy(Librarian value){
+        public Builder copy(User value){
             this.code = value.getCode();
             this.id = value.getId();
-            this.firstName = value.getFirstnName();
+            this.firstName = value.getFirstName();
             this.lastName = value.getLastName();
+            //this.password = value.getPassword();
             //this.consumtionList=value.getConsumtionList();
             return this;
         }

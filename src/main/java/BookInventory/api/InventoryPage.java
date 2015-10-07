@@ -38,7 +38,7 @@ public class InventoryPage {
 
                     .name(inventoryItem.getName())
                     .description(inventoryItem.getDescription())
-                    .consumtionList(inventoryItem.getConsumtionList())
+                    //.consumtionList(inventoryItem.getConsumtionList())
                     .build();
             Link consumtions = new
                     Link("http://localhost:3306/inventories/"+res.getResid().toString())

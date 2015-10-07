@@ -25,7 +25,7 @@ public class ReturnTest {
         values.put("code","54ZTY");
 
         Return ret = ReturnFactory
-                .createReturn(5, values, userList);
+                .createReturn(5, values);
 
         Assert.assertEquals("54ZTY", ret.getCode());
     }
@@ -38,7 +38,7 @@ public class ReturnTest {
         values.put("code", "54ZTY");
 
         Return ret = ReturnFactory
-                .createReturn(5, values, userList);
+                .createReturn(5, values);
 
         Return newReturn = new Return
                 .Builder(ret.getCode())

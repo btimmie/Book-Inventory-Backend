@@ -37,7 +37,7 @@ public class OrderCrudTest extends AbstractTestNGSpringContextTests {
         values.put("description","Urgent order for a vey special client");
 
         Order order = OrderFactory
-                .createOrder(20, values, null);
+                .createOrder(20, values);
 
         repository.save(order);
         id=order.getId();
@@ -59,7 +59,7 @@ public class OrderCrudTest extends AbstractTestNGSpringContextTests {
         values.put("description","Urgent order for a vey special client");
 
         Order order = OrderFactory
-                .createOrder(20,values,inventoryItemList);
+                .createOrder(20,values);
 
         Order newOrder = new Order
                 .Builder(order.getCode())
