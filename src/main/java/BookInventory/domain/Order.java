@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * Created by student on 2015/04/25.
- */
+ *//*
 @Entity
 public class Order implements Serializable {
 
@@ -142,4 +142,4 @@ public class Order implements Serializable {
                 ", code='" + code + '\'' +
                 '}';
     }
-}
+}*/

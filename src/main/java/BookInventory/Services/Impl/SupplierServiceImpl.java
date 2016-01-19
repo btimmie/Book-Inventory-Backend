@@ -1,3 +1,4 @@
+/*
 package BookInventory.Services.Impl;
 
 import BookInventory.Services.SupplierService;
@@ -10,9 +11,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * Created by student on 2015/05/17.
- */
+ *//*
+
 @Service
 public class SupplierServiceImpl implements SupplierService{
 
@@ -49,3 +52,4 @@ public class SupplierServiceImpl implements SupplierService{
         return allSuppliers;
     }
 }
+*/

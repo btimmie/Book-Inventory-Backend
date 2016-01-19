@@ -1,12 +1,9 @@
 package BookInventory.config.factory;
 
-import BookInventory.domain.Order;
-
-import java.util.Map;
 
 /**
  * Created by student on 2015/04/26.
- */
+ *//*
 public class OrderFactory {
         public static Order createOrder(int quantity,Map<String,String> values){
 
@@ -17,4 +14,4 @@ public class OrderFactory {
                 .build();
         return order;
     }
-}
+}*/

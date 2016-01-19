@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * Created by student on 2015/04/25.
- */
+ *//*/
 @Entity
 public class Consumtion implements Serializable {
     @Id
@@ -106,4 +106,4 @@ public class Consumtion implements Serializable {
                     '}';
         }
     }
-}
+}*/

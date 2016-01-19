@@ -1,11 +1,7 @@
 package BookInventory.domain;
 
-
 import javax.persistence.*;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Created by student on 2015/04/25.
@@ -20,13 +16,6 @@ public class Supplier implements Serializable {
     private String name;
     private String address;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinColumn(name = "supplier_id")
-    private List<InventoryItem> inventoryItemList;
-//    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-//    @JoinColumn(name = "supplier_id")
-//    private List<Order> orderList;
-
     private Supplier(){
     }
 
@@ -35,8 +24,7 @@ public class Supplier implements Serializable {
         this.code=builder.code;
         this.name=builder.name;
         this.address=builder.address;
-        this.inventoryItemList=builder.inventoryItemList;
-//        this.orderList=builder.orderList;
+
     }
 
 
@@ -56,21 +44,15 @@ public class Supplier implements Serializable {
         return address;
     }
 
-    public List<InventoryItem> getInventoryItemList() {
-        return inventoryItemList;
-    }
 
-//    public List<Order> getOrderList() {
-//        return orderList;
-//    }
+
+
 
     public static class Builder{
         private long id;
         private String code;
         private String name;
         private String address;
-        private List<InventoryItem> inventoryItemList;
-        private List<Order> orderList;
 
         public Builder(String code){
             this.code=code;
@@ -91,23 +73,14 @@ public class Supplier implements Serializable {
             return this;
         }
 
-        public Builder inventoryItemList(List<InventoryItem> value){
-            this.inventoryItemList=value;
-            return this;
-        }
 
-//        public Builder orderlist(List<Order> value){
-//            this.orderList=value;
-//            return this;
-//        }
 
         public Builder copy(Supplier value){
             this.id=value.id;
             this.code=value.code;
             this.name=value.name;
             this.address=value.address;
-            this.inventoryItemList=value.inventoryItemList;
-//            this.orderList=value.orderList;
+
             return this;
         }
 

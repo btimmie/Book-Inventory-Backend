@@ -1,5 +1,5 @@
 package BookInventory.domain;
-
+/*
 import BookInventory.config.factory.SupplierFactory;
 import org.junit.Assert;
 import org.junit.Before;
@@ -53,4 +53,4 @@ public class SupplierTest {
         Assert.assertEquals("CCMA",newSupplier.getName());
         Assert.assertEquals("CNA",supplier.getName());
     }
-}
+}/*/

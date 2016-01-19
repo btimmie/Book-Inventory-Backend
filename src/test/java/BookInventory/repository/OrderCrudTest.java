@@ -1,3 +1,4 @@
+/*
 package BookInventory.repository;
 
 
@@ -17,9 +18,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * Created by student on 2015/05/03.
- */
+ *//*
+
 
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
@@ -82,3 +85,4 @@ public class OrderCrudTest extends AbstractTestNGSpringContextTests {
     }
 
 }
+*/

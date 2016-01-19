@@ -9,15 +9,14 @@ import java.util.Map;
  * Created by student on 2015/04/26.
  */
 public class InventoryItemFactory {
-    public static InventoryItem createInventoryItem(Map<String,String> values,
-                                            List<Consumtion> consumtionList,List<Return> returnList){
+
+    public static InventoryItem createInventoryItem(Map<String,String> values, Supplier supplier ){
 
         InventoryItem inventoryItem = new InventoryItem
                 .Builder(values.get("code"))
                 .name(values.get("name"))
                 .description(values.get("description"))
-                .consumtionList(consumtionList)
-                .returnList(returnList)
+                .supplier(supplier)
                 .build();
         return inventoryItem;
 

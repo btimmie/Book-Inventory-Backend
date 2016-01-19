@@ -1,85 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="inventory@localhost" uuid="4f91049b-e14c-4668-9e63-7c14cb5ca742">
-    <database-info product="MySQL" version="5.5.44-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+  <data-source name="MySQL - bookInventory@localhost" uuid="3d1828e1-1445-4607-8c4b-d1819b09792a">
+    <database-info product="MySQL" version="5.6.25-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
-    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
-    <schema name="" catalog="inventory"/>
-    <table name="ajustment" schema="" catalog="inventory" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="item_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="bookinventory"/>
+    <table name="art_work" schema="" catalog="bookinventory" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_cfrww7u94njkk0a210fb4rl01" table="employee" schema="" catalog="inventory" columns="ajustment_id"/>
-      <index name="UK_t46p3jf52ouqn70gdh8u27pn3" unique="true" columns="code"/>
     </table>
-    <table name="consumtion" schema="" catalog="inventory" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="date_consumed" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="quantity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="inventory_item_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_ejkgutfuq85qaiiwuxhh99xa3" columns="inventory_item_id" ref-table="inventory_item" ref-schema="" ref-catalog="inventory" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="UK_o4plrs6xvr5yalda74c1coxip" unique="true" columns="code"/>
-      <index name="FK_ejkgutfuq85qaiiwuxhh99xa3" unique="false" columns="inventory_item_id"/>
-    </table>
-    <table name="employee" schema="" catalog="inventory" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="ajustment_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_cfrww7u94njkk0a210fb4rl01" columns="ajustment_id" ref-table="ajustment" ref-schema="" ref-catalog="inventory" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="UK_nbyivu8qgmx0r7wtbplf01gf8" unique="true" columns="code"/>
-      <index name="FK_cfrww7u94njkk0a210fb4rl01" unique="false" columns="ajustment_id"/>
-    </table>
-    <table name="inventory_item" schema="" catalog="inventory" type="TABLE">
+    <table name="inventory_item" schema="" catalog="bookinventory" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="employee" sqlType="TINYBLOB" precision="255" scale="0" nullable="true" jdbcType="-2"/>
       <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="inventory_item_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="supplier_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="order_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_61pn0fky0h9bnh9pttjp478os" columns="supplier_id" ref-table="supplier" ref-schema="" ref-catalog="inventory" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_pe8h9u6hnlg04ej1vpcxpsij8" columns="inventory_item_id" ref-table="supplier" ref-schema="" ref-catalog="inventory" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_ejkgutfuq85qaiiwuxhh99xa3" table="consumtion" schema="" catalog="inventory" columns="inventory_item_id"/>
+      <foreign-key name="FK_61pn0fky0h9bnh9pttjp478os" columns="supplier_id" ref-table="supplier" ref-schema="" ref-catalog="bookinventory" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="UK_pv0dq9rmc7gwo2x3kllwtntom" unique="true" columns="code"/>
       <index name="FK_61pn0fky0h9bnh9pttjp478os" unique="false" columns="supplier_id"/>
-      <index name="FK_pe8h9u6hnlg04ej1vpcxpsij8" unique="false" columns="inventory_item_id"/>
     </table>
-    <table name="librarian" schema="" catalog="inventory" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    <table name="museum" schema="" catalog="bookinventory" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="museum_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="museumcode" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <index name="UK_ha7twa7mjjk2gsa62lintiowu" unique="true" columns="code"/>
     </table>
-    <table name="manager" schema="" catalog="inventory" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    <table name="staff" schema="" catalog="bookinventory" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idnumber" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="surname" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <index name="UK_j5hutclgrwpvfvj6sg7inpe6j" unique="true" columns="code"/>
     </table>
-    <table name="supplier" schema="" catalog="inventory" type="TABLE">
+    <table name="supplier" schema="" catalog="bookinventory" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_61pn0fky0h9bnh9pttjp478os" table="inventory_item" schema="" catalog="inventory" columns="supplier_id"/>
-      <exported-key name="FK_pe8h9u6hnlg04ej1vpcxpsij8" table="inventory_item" schema="" catalog="inventory" columns="inventory_item_id"/>
+      <exported-key name="FK_61pn0fky0h9bnh9pttjp478os" table="inventory_item" schema="" catalog="bookinventory" columns="supplier_id"/>
       <index name="UK_u0lh6hby20ok7au7646wrewl" unique="true" columns="code"/>
+    </table>
+    <table name="user" schema="" catalog="bookinventory" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>
 </component>

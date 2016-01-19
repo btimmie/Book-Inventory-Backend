@@ -1,3 +1,4 @@
+/*
 package BookInventory.api.integrationtests;
 
 import BookInventory.App;
@@ -17,9 +18,11 @@ import java.net.URI;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+*/
 /**
  * Created by hashcode on 2015/08/21.
- */
+ *//*
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = App.class)
 @WebAppConfiguration
@@ -43,9 +46,12 @@ public class SupplierAPITest {
 
     public static final String REST_SERVICE_URI = "http://localhost:8080/api";
 
-    /* GET */
+    */
+/* GET *//*
+
     @SuppressWarnings("unchecked")
-    private static void listAllSuppliers(){
+   */
+/* private static void listAllSuppliers(){
         System.out.println("Testing listAllSuppliers API-----------");
 
         RestTemplate restTemplate = new RestTemplate();
@@ -58,9 +64,13 @@ public class SupplierAPITest {
         }else{
             System.out.println("No Supplier exist----------");
         }
-    }
+    }*//*
 
-    /* GET */
+*/
+/*
+    */
+/* GET *//*
+
     private static void getSupplier(){
         System.out.println("Testing getSupplier API----------");
         RestTemplate restTemplate = new RestTemplate();
@@ -68,7 +78,9 @@ public class SupplierAPITest {
         System.out.println(Subject);
     }
 
-    /* POST */
+    */
+/* POST *//*
+
     private static void createSupplier() {
         System.out.println("Testing create Supplier API----------");
         RestTemplate restTemplate = new RestTemplate();
@@ -77,7 +89,9 @@ public class SupplierAPITest {
         System.out.println("Location : "+uri.toASCIIString());
     }
 
-    /* PUT */
+    */
+/* PUT *//*
+
     private static void updateSupplier() {
         System.out.println("Testing update Supplier API----------");
         RestTemplate restTemplate = new RestTemplate();
@@ -86,7 +100,9 @@ public class SupplierAPITest {
         System.out.println(supplier);
     }
 
-    /* DELETE */
+    */
+/* DELETE *//*
+
     private static void deleteSupplier() {
         System.out.println("Testing delete Supplier API----------");
         RestTemplate restTemplate = new RestTemplate();
@@ -94,7 +110,9 @@ public class SupplierAPITest {
     }
 
 
-    /* DELETE */
+    */
+/* DELETE *//*
+
     private static void deleteAllSupplier() {
         System.out.println("Testing all delete Supplier API----------");
         RestTemplate restTemplate = new RestTemplate();
@@ -102,3 +120,4 @@ public class SupplierAPITest {
     }
 
 }
+*/

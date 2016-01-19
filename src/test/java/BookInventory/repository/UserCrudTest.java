@@ -1,8 +1,8 @@
+
 package BookInventory.repository;
 
 import BookInventory.App;
 import BookInventory.config.factory.UserFactory;
-import BookInventory.domain.Consumtion;
 import BookInventory.domain.User;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +16,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 /**
  * Created by student on 2015/05/03.
  */
+
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 public class UserCrudTest extends AbstractTestNGSpringContextTests {
@@ -32,10 +34,10 @@ public class UserCrudTest extends AbstractTestNGSpringContextTests {
         //List<Consumtion> consumtionList = new ArrayList<Consumtion>();
         Map<String,String> values = new HashMap<String,String>();
 
-        values.put("code","5478");
+        values.put("code","5478t");
         values.put("firstName","Junaid");
         values.put("lastName","Duplessis");
-        //values.put("password","123");
+        values.put("password","123");
 
         User user = UserFactory
                 .createCustomer(values);
@@ -53,13 +55,13 @@ public class UserCrudTest extends AbstractTestNGSpringContextTests {
 
     @Test(dependsOnMethods = "read")
     public void update() throws Exception{
-        List<Consumtion> consumtionList = new ArrayList<Consumtion>();
+//        List<Consumtion> consumtionList = new ArrayList<Consumtion>();
         Map<String, String> values = new HashMap<String, String>();
 
         values.put("code", "98TYT");
         values.put("firstName","Lexi");
         values.put("lastName","Parker");
-        //values.put("password","123");
+        values.put("password","123");
 
 
         User user = UserFactory
@@ -83,3 +85,4 @@ public class UserCrudTest extends AbstractTestNGSpringContextTests {
         org.testng.Assert.assertNull(deletedUser);
     }
 }
+

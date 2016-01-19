@@ -1,5 +1,5 @@
 package BookInventory.domain;
-
+/*
 import BookInventory.config.factory.LibrarianFactory;
 import org.junit.Assert;
 import org.junit.Before;
@@ -53,4 +53,4 @@ public class LibrarianTest {
         assertEquals("Du Plessis",librarian.getLastName());
         assertEquals("Diggles",newLibrarian.getLastName());
     }
-}
+}*/

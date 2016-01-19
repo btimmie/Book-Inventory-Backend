@@ -1,3 +1,4 @@
+/*
 package BookInventory.model;
 
 
@@ -9,9 +10,11 @@ import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;
 
+*/
 /**
  * Created by student on 2015/05/24.
- */
+ *//*
+
 public class InventoryItemResource extends ResourceSupport {
 
     private Long resid;
@@ -125,3 +128,4 @@ public class InventoryItemResource extends ResourceSupport {
         }
     }
 }
+*/

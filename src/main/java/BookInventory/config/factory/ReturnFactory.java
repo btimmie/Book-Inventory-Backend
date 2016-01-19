@@ -1,12 +1,8 @@
 package BookInventory.config.factory;
 
-import BookInventory.domain.Return;
-
-import java.util.Map;
-
 /**
  * Created by student on 2015/04/26.
- */
+ *//*
 public class ReturnFactory {
     public static Return createReturn(int quantity, Map<String,String> values){
 
@@ -17,4 +13,4 @@ public class ReturnFactory {
                 .build();
         return ret;
     }
-}
+}*/

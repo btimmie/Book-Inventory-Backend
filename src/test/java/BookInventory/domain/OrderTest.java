@@ -1,5 +1,5 @@
 package BookInventory.domain;
-
+/*
 import BookInventory.config.factory.OrderFactory;
 import org.junit.Assert;
 import org.junit.Before;
@@ -51,7 +51,7 @@ public class OrderTest {
         Assert.assertEquals("CCMA",newSupplier.getName());
         Assert.assertEquals("CNA",supplier.getName());
     }
-         */
+
         List<InventoryItem> inventoryItemList = new ArrayList<InventoryItem>();
         Map<String,String> values = new HashMap<String, String>();
 
@@ -72,4 +72,4 @@ public class OrderTest {
         Assert.assertEquals(21,newOrder.getQuantity());
         Assert.assertEquals(20,order.getQuantity());
     }
-}
+}*/

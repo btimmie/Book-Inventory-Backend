@@ -1,3 +1,4 @@
+/*
 package BookInventory.repository;
 
 import BookInventory.App;
@@ -13,9 +14,11 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * Created by student on 2015/05/03.
- */
+ *//*
+
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 public class AjustmentCrudTest extends AbstractTestNGSpringContextTests {
@@ -57,4 +60,4 @@ public class AjustmentCrudTest extends AbstractTestNGSpringContextTests {
         Ajustment updateAjustment = repository.findOne(id);
         org.testng.Assert.assertEquals(updateAjustment.getAmount(),10);
     }
-}
+}*/

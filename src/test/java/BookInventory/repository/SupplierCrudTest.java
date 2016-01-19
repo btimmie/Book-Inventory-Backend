@@ -1,3 +1,4 @@
+/*
 package BookInventory.repository;
 
 import BookInventory.App;
@@ -16,9 +17,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * Created by student on 2015/05/03.
- */
+ *//*
+
 
 
 @SpringApplicationConfiguration(classes= App.class)
@@ -68,4 +71,4 @@ public class SupplierCrudTest extends AbstractTestNGSpringContextTests {
         Supplier newSupplier = repository.findOne(id);
         Assert.assertNull(newSupplier);
     }
-}
+}*/

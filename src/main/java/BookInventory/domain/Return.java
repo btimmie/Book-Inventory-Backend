@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * Created by student on 2015/04/25.
- */
+ *//*
 @Entity
 public class Return implements Serializable {
     @Id
@@ -122,3 +122,4 @@ public class Return implements Serializable {
         }
     }
 }
+*/

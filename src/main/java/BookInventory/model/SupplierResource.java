@@ -1,3 +1,4 @@
+/*
 package BookInventory.model;
 
 import BookInventory.domain.InventoryItem;
@@ -6,9 +7,11 @@ import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;
 
+*/
 /**
  * Created by student on 2015/05/24.
- */
+ *//*
+
 public class SupplierResource extends ResourceSupport {
 
     private Long resid;
@@ -107,3 +110,4 @@ public class SupplierResource extends ResourceSupport {
         }
     }
 }
+*/

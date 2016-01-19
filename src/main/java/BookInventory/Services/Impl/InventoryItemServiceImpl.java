@@ -1,7 +1,6 @@
 package BookInventory.Services.Impl;
 
 import BookInventory.Services.InventoryItemService;
-import BookInventory.domain.Consumtion;
 import BookInventory.domain.InventoryItem;
 import BookInventory.repository.InventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +20,35 @@ public class InventoryItemServiceImpl implements InventoryItemService {
 
 
     @Override
-    public List<InventoryItem> getReturns() {
-        List<InventoryItem> items = new ArrayList<>();
-        Iterable<InventoryItem> values = repository.findAll();
-        for(InventoryItem value : values) {
-            items.add(value);
+    public List<InventoryItem> getInventoryItems() {
+
+        List<InventoryItem> inventoryItemList = new ArrayList<InventoryItem>();
+        Iterable<InventoryItem> inventoryItems = repository.findAll();
+        for (InventoryItem i : inventoryItems) {
+            inventoryItemList.add(i);
         }
-        return items;
+        return inventoryItemList;
+    }
+
+
+    @Override
+    public InventoryItem findById(Long id) {
+        return repository.findOne(id);
     }
 
     @Override
-    public List<Consumtion> getAllConsumtions(Long id) {
-        return null;//repository.findOne(id).getConsumtionList();
+    public InventoryItem save(InventoryItem entity) {
+        return repository.save(entity);
+    }
+
+    @Override
+    public InventoryItem update(InventoryItem entity) {
+        return repository.save(entity);
+    }
+
+    @Override
+    public void delete(InventoryItem entity) {
+        repository.delete(entity);
+
     }
 }

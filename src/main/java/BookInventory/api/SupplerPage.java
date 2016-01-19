@@ -1,8 +1,11 @@
+/*
 package BookInventory.api;
 
+*/
 /**
  * Created by student on 2015/05/17.
- */
+ *//*
+
 
 import BookInventory.Services.SupplierService;
 import BookInventory.domain.Supplier;
@@ -17,7 +20,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/api/**")
+@RequestMapping(value="/api*/
+/**")
 public class SupplerPage {
 
     @Autowired
@@ -110,3 +114,4 @@ public class SupplerPage {
     }
 
 }
+*/

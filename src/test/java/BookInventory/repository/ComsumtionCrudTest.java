@@ -1,3 +1,4 @@
+/*
 package BookInventory.repository;
 
 import BookInventory.App;
@@ -13,9 +14,11 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * Created by student on 2015/05/03.
- */
+ *//*
+
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 public class ComsumtionCrudTest extends AbstractTestNGSpringContextTests {
@@ -71,3 +74,4 @@ public class ComsumtionCrudTest extends AbstractTestNGSpringContextTests {
         org.testng.Assert.assertNull(deletedConsumtion);
     }
 }
+*/

@@ -1,11 +1,8 @@
+/*
 package BookInventory.Services;
 
 import BookInventory.App;
-import BookInventory.config.factory.OrderFactory;
-import BookInventory.config.factory.SupplierFactory;
-import BookInventory.domain.Order;
-import BookInventory.domain.Supplier;
-import BookInventory.repository.SupplierRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.stereotype.Service;
@@ -20,9 +17,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * Created by student on 2015/05/17.
- */
+ *//*
+
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
 @Service
@@ -69,3 +68,4 @@ public class SupplierOrderServiceTest extends AbstractTestNGSpringContextTests {
 //
 //    }
 }
+*/

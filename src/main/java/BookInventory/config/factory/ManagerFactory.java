@@ -1,13 +1,10 @@
 package BookInventory.config.factory;
 
-import BookInventory.domain.Librarian;
-import BookInventory.domain.Manager;
-
-import java.util.Map;
 
 /**
  * Created by student on 2015/04/26.
  */
+/*
 public class ManagerFactory {
     public static Manager createManager(Map<String,String> values){
 
@@ -18,4 +15,4 @@ public class ManagerFactory {
                 .build();
         return manager;
     }
-}
+}*/
