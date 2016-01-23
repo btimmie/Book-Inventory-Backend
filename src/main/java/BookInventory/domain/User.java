@@ -31,7 +31,6 @@ public class User implements Serializable {
         this.firstName=builder.firstName;
         this.lastName=builder.lastName;
         this.password=builder.password;
-        //this.consumtionList=builder.consumtionList;
     }
 
     public Long getId() {
@@ -54,9 +53,6 @@ public class User implements Serializable {
         return password;
     }
 
-    //    public List<Consumtion> getConsumtionList() {
-//        return consumtionList;
-//    }
 
     public static class Builder{
         private Long id;
@@ -64,7 +60,6 @@ public class User implements Serializable {
         private String firstName;
         private String lastName;
         private String password;
-        //private List<Consumtion>consumtionList;
 
         public Builder(String code){
             this.code=code;
@@ -90,10 +85,7 @@ public class User implements Serializable {
             return this;
         }
 
-//        public Builder consumtionList(List<Consumtion> value){
-//            this.consumtionList =value;
-//            return this;
-//        }
+
 
         public Builder copy(User value){
             this.code = value.getCode();
@@ -101,7 +93,6 @@ public class User implements Serializable {
             this.firstName = value.getFirstName();
             this.lastName = value.getLastName();
             this.password = value.getPassword();
-            //this.consumtionList=value.getConsumtionList();
             return this;
         }
 

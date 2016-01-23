@@ -35,12 +35,6 @@ public class UserPage {
         public ResponseEntity<Void> createBook(@RequestBody User user,    UriComponentsBuilder ucBuilder) {
             System.out.println("Creating User " + user.getFirstName());
 
-    //     USE THIS IF YOU WANT TO CHECK UNIQUE OBJECT
-    //      if (SubjectService.isSubjectExist(Subject)) {
-    //            System.out.println("A Subject with name " + Subject.getName() + " already exist");
-    //            return new ResponseEntity<Void>(HttpStatus.CONFLICT);
-    //        }
-
         service.save(user);
 
         HttpHeaders headers = new HttpHeaders();
