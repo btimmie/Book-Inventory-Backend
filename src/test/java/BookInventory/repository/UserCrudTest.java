@@ -11,9 +11,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -34,7 +32,7 @@ public class UserCrudTest extends AbstractTestNGSpringContextTests {
         //List<Consumtion> consumtionList = new ArrayList<Consumtion>();
         Map<String,String> values = new HashMap<String,String>();
 
-        values.put("code","5478t");
+        values.put("code","54dfgdfg78t");
         values.put("firstName","Junaid");
         values.put("lastName","Duplessis");
         values.put("password","123");
